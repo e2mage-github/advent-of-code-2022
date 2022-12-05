@@ -25,11 +25,9 @@ public class day1 {
             }
 
             int highest = 0;
-            int highInd = -1;
             for (int i = 0; i < list.size(); i++) {
                 if (list.get(i) > highest) {
                     highest = list.get(i);
-                    highInd = i;
                 }
             }
             System.out.println("The highest number of calories one of the elves has is: " + highest);
