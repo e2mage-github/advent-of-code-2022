@@ -7,6 +7,9 @@ public class day1 {
     public static void main(String[] args) throws IOException {
         // remember to add 1 to the index to get the number of the elf with the most
         // initializing data structure, list can work well and it resizes automatically
+        // im choosing an arraylist as my data structure because i can store the count of each elf in one index.
+        // an array may have better space complexity, however i think using an array resizing helper method
+        // would add more time complexity than its worth. therefore an arraylist works well.
         List<Integer> list = new ArrayList<>();
 
         //initializing input readers and surrounding by try catch block in case of file not existing
