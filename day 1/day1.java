@@ -18,7 +18,7 @@ public class day1 {
                 String currLine = br.readLine();
                 if (!currLine.equals("")) {
                     count += Integer.parseInt(currLine);
-                } else {
+                } else if (currLine.equals("")) {
                     list.add(count);
                     count = 0;
                 }
@@ -32,7 +32,7 @@ public class day1 {
                     highInd = i;
                 }
             }
-            System.out.println("The elf with the most calories packed is elf #" + (highInd + 1));
+            System.out.println("The highest number of calories one of the elves has is: " + highest);
 
             br.close();
             fr.close();
