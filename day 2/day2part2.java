@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class day2part2 {
-    private static final String FILENAME = "C:/Users/Emily/Documents/Code/advent of code 2022/day2/input.txt";
+    private static final String FILENAME = "C:/Users/Emily/Documents/Code/advent of code 2022/day 2/input.txt";
     /*
      * A for rock, 1 point
      * B for paper, 2 points

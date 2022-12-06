@@ -9,7 +9,7 @@ public class day2 {
      * C, Z; for scissors. 3 points
      */
 
-    private static final String FILENAME = "C:/Users/Emily/Documents/Code/advent of code 2022/day2/input.txt";
+    private static final String FILENAME = "C:/Users/Emily/Documents/Code/advent of code 2022/day 2/input.txt";
     public static void main(String[] args) {
         try (FileReader fr = new FileReader(FILENAME); BufferedReader br = new BufferedReader(fr)) {
             int score = 0;
