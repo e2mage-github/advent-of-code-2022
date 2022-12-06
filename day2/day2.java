@@ -38,7 +38,6 @@ public class day2 {
         } else if ((opponent == 1 && team == 2) || (opponent == 2 && team == 3) || (opponent == 3 && team == 1)) {
             score += 6;
         }
-        System.out.println("line: " + str + ", score: " + score);
 
         return score;
     }
