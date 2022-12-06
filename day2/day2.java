@@ -14,10 +14,9 @@ public class day2 {
         try (FileReader fr = new FileReader(FILENAME); BufferedReader br = new BufferedReader(fr)) {
             int score = 0;
             while (br.ready()) {
-                String currLine = br.readLine().replaceAll("[^a-zA-Z0-9]", "");
+                String currLine = br.readLine().replaceAll("[^a-zA-Z]", "");
                 if (!currLine.equals("OH")) {
                     score += scoreCalculator(currLine);
-                    System.out.println("current score: " + score + ", currLine: " + currLine);
                 }
 
             }
@@ -32,15 +31,14 @@ public class day2 {
     static int scoreCalculator(String str) {
         int opponent = letterConverter(Character.toString(str.charAt(0)));
         int team = letterConverter(Character.toString(str.charAt(1)));
-        int score = 0 + team;
-
+        int score = team;
+        
         if (opponent == team) {
             score += 3;
         } else if ((opponent == 1 && team == 2) || (opponent == 2 && team == 3) || (opponent == 3 && team == 1)) {
             score += 6;
-        } else if ((opponent == 1  && team == 3) || (opponent == 2 && team == 1) || (opponent == 3 && team == 2)) {
-            score += 0;
         }
+        System.out.println("line: " + str + ", score: " + score);
 
         return score;
     }
