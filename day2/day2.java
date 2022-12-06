@@ -15,9 +15,7 @@ public class day2 {
             int score = 0;
             while (br.ready()) {
                 String currLine = br.readLine().replaceAll("[^a-zA-Z]", "");
-                if (!currLine.equals("OH")) {
-                    score += scoreCalculator(currLine);
-                }
+                score += scoreCalculator(currLine);
 
             }
 
