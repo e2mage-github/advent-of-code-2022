@@ -13,11 +13,8 @@ public class day1 {
         List<Integer> list = new ArrayList<>();
 
         //initializing input readers and surrounding by try catch block in case of file not existing
-        FileReader fr;
-        BufferedReader br;
-        try {
-            fr = new FileReader(FILENAME);
-            br = new BufferedReader(fr);
+
+        try (FileReader fr = new FileReader(FILENAME); BufferedReader br = new BufferedReader(fr)) {
             
             //counting amount of calories each elf has
             int count = 0;
@@ -42,9 +39,7 @@ public class day1 {
             //printing answer!
             System.out.println("The highest number of calories one of the elves has is: " + highest);
 
-            //closing readers
-            br.close();
-            fr.close();
+
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
