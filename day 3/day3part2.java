@@ -50,10 +50,6 @@ public class day3part2 {
             }
         }
 
-        return tripleFinder(s1, s2, s3);
-    }
-
-    static char tripleFinder(HashSet<Character> s1, HashSet<Character> s2, HashSet<Character> s3) {
         char ans = ' ';
         for (char c : s1) {
             if (s2.contains(c) && s3.contains(c)) {
